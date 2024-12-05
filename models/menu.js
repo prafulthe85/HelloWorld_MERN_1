@@ -18,11 +18,12 @@ const MenuSchema = new mongoose.Schema({
     default: false, // Default value if not passed by the user
   },
   Ingredients: {
-    type: String,
-    enum: ["Chicken", "Vegetables", "milk"],
+    type: [String], // This takes array of ingredients in string
+    default: [],
   },
   Sales: {
     type: Number,
+    default: 0,
   },
 });
 
